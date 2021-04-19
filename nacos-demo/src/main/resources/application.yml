@@ -1,0 +1,32 @@
+#server:
+#  port: 8999
+#
+#
+##spring:
+##  application:
+##    name: demo-test
+##  nacos:
+##    discovery:
+##      server-addr: 127.0.0.1:8848
+##    config:
+##      server-addr: 127.0.0.1:8848
+##      #namespace: adb4dd2d-defb-4ac0-9038-7c7fe066b0d2
+##      file-extension: yaml
+#
+##prefix−{spring:
+##  profile:
+##    active}:
+##      ${file-extension}:
+#
+#spring:
+#  application:
+#    name: demo-test
+#  cloud:
+#    nacos:
+#      config:
+#        server-addr: localhost:8848
+#        namespace: adb4dd2d-defb-4ac0-9038-7c7fe066b0d2
+#        group: DEFAULT_GROUP
+#        file-extension: yaml
+#        refresh-enabled: true
+#        prefix: demo-dev

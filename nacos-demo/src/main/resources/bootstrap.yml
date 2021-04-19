@@ -1,0 +1,33 @@
+server:
+  port: 8999
+
+
+spring:
+  application:
+    name: demo
+  profiles:
+    active: test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: adb4dd2d-defb-4ac0-9038-7c7fe066b0d2
+        username: nacos
+        password: nacos
+        heart-beat-interval: 3000    #心跳间隔
+        heart-beat-timeout: 30000    #心跳超时时间
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        namespace: adb4dd2d-defb-4ac0-9038-7c7fe066b0d2  #命名空间
+        group: DEFAULT_GROUP                             #分组
+        file-extension: yaml                             #配置方式yaml，目前仅支持properties/yaml
+        refresh-enabled: true                            #默认开启自动刷新
+        shared-configs:                                  #引入文件
+          - data-id: demo-test.yaml
+            group: DEFAULT_GROUP
+            refresh: true
+          - data-id: demo-redis.yaml
+            group: DEFAULT_GROUP
+            refresh: true
